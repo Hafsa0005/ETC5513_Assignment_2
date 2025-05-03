@@ -1,0 +1,93 @@
+---
+title: "Collaborative and Reproducible Practices (Assignment 2)"
+author: "Hafsa Altaf"
+format: 
+  html: 
+    theme: cerulean
+  pdf: default
+editor: visual
+---
+
+
+# A guide to use Git, GitHub and the Command Line Interface for Version Control and Collaboration
+
+This guide provides a clear and step by step explanation of how to effectively use **Git**, **GitHub** and the **Command Line Interface** for version control and team collaboration. 
+ 
+**Git** is a powerful version control system that track changes in files and making it easier for individuals or teams to manage documents or codes and collaborate efficiently. **GitHub** is a cloud-based platform where git repositories can be stored, shared and collaboratively developed by multiple contributors. The **Command Line Interface** is a text-based interface that allow users to execute Git commands and interact directly with both local and remote repositories.
+
+## 1. Create a New RStudio Project and Quarto File
+
+ - In RStudio:
+   - Go to **File > New Project > New Directory > New project**
+   - Name your project folder (e.g. ETC5513_Assignment_2)
+   - Click on the **Create Project**
+   - Inside the project, create a new Quarto document:
+      **File > New File > Quarto Document** 
+   - Name quarto document (e.g. example.qmd), add your name in the **Author**         field, select **HTML** as the output format, click Create
+   - Now **Knit** the file using the **Render** button. It generates an               **example.html** file
+   
+### Output of the Knitted HTML File
+
+<div style="text-align: center;">
+  <img src="images/HTML_image.png" alt="Output of the Knitted HTML File" style="border: 2px solid black; padding: 5px; width: 80%;">
+</div>
+
+## 2. Create GitHub repository and Push qmd file to GitHub from Command Line Interface
+
+- GitHub Repository:
+  - Go to your GitHub Profile > Create New repository
+  - Name the remote repository (e.g. ETC5513_Assignment_2)
+  - Clone it to your local computer, you can use **Git Bash** as your **Command Line Interface** on Windows
+- To clone the repository using Git Bash:
+    - Open Git Bash and Use this command
+```{r}
+ ## git clone <SSH Key or repository URL>
+```
+ 
+- Navigate into the cloned repository folder using Git Bash
+```{r}
+ ## cd ETC5513_Assignment_2
+```
+ 
+- Add your Quarto file (example.qmd) into this folder if it is not already there
+- Use the following Git commands to stage, commit and push the file to the remote repository
+```{r}
+## To stage  >  git add example.qmd
+## To commit  >  git commit -m "Add example.qmd Quarto file"
+## To push  >  git push origin main
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
