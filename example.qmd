@@ -32,7 +32,7 @@ This guide provides a clear and step by step explanation of how to effectively u
   <img src="images/HTML_image.png" alt="Output of the Knitted HTML File" style="border: 2px solid black; padding: 5px; width: 80%;">
 </div>
 
-## 2. Create GitHub repository and Push qmd file to GitHub from Command Line Interface
+## 2. Create GitHub Repository and Push qmd file to GitHub from Command Line Interface
 
 - GitHub Repository:
   - Go to your GitHub Profile > Create New repository
@@ -59,9 +59,30 @@ This guide provides a clear and step by step explanation of how to effectively u
 
 
 
+## 3. Create a New Branch and Modify File
+- Use Git Bash to create a new branch using this command 
+```{r}
+## git branch testbranch
+```
 
+- Now to modify file first switch to **testbranch** using this command 
+```{r}
+## git switch testbranch
+```
 
+- Refresh your RStudio to see you are currently working in the **testbranch**
 
+- Modify example.qmd
+```{r}
+## Adding this new section to see changes in the testbranch.
+```
+
+- To push the changes made in example.qmd on a newly created branch to the remote repository, use the following commands to stage, commit, and push the changes
+```{r}
+## To stage  >  git add example.qmd
+## To commit  >  git commit -m "Modified example.qmd in testbranch"
+## To push  >  git push origin testbranch
+```
 
 
 
