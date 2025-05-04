@@ -122,9 +122,7 @@ now to Create a merge conflict between main branch and the testbranch
  
 Now being on the same branch that you have created which is testbranch make some changes in the example.qmd which can be adding this new section 
 
-```{r}
-## This section was added on the testbranch. 
-```
+This section was added on the testbranch. 
 
  Save the file, then stage and commit the change
  
@@ -134,13 +132,39 @@ Now being on the same branch that you have created which is testbranch make some
 ```
 
  
+ now Switch to the main branch using this command
+```{r}
+## git switch main 
+```
+ 
+ modify the same section differently, that we added above from This section was added on the testbranch.
+```{r}
+## This section was added on the testbranch. TO 
+
+## This section was added on the main branch.
+
+```
+ 
+ Save it, then stage and commit
+ 
+```{r}
+## To stage  >  git add example.qmd
+## To commit  >  git commit -m "Conflicting change on main"
+```
  
  
+ now being on the main branch merge into testbranch using this comand 
+```{r}
+## git merge testbranch
+```
  
  
- 
- 
- 
+ solve the conflict
+```{r}
+## To stage  >  git add example.qmd
+## To commit  >  git commit -m "Resolved merge conflict in example.qmd"
+## To push  >  git push origin main
+```
  
  
  
