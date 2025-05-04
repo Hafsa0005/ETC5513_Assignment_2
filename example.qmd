@@ -122,7 +122,7 @@ now to Create a merge conflict between main branch and the testbranch
  
 Now being on the same branch that you have created which is testbranch make some changes in the example.qmd which can be adding this new section 
 
-This section was added on the main branch. 
+This Section include changes from both branches. 
 
  Save the file, then stage and commit the change
  
@@ -158,8 +158,16 @@ This section was added on the main branch.
 ## git merge testbranch
 ```
  
+ now u will see conflict something like that on terminala and on qmd file
  
- solve the conflict
+ 
+ 
+ now to solve the conflict first of all delete the conflict markers and edit the file to keep only one version or from one branch, which can be some thing like 
+```{r}
+## This Section include changes from both branches. 
+```
+ 
+ now Save the file, then stage and commit the changes and push it to GitHub
 ```{r}
 ## To stage  >  git add example.qmd
 ## To commit  >  git commit -m "Resolved merge conflict in example.qmd"
@@ -167,7 +175,7 @@ This section was added on the main branch.
 ```
  
  
- 
+ now u have solve the merge conflict
  
  
  
