@@ -57,9 +57,8 @@ This guide provides a clear and step by step explanation of how to effectively u
 ## To push  >  git push origin main
 ```
 
-
-
 ## 3. Create a New Branch and Modify File
+
 - Use Git Bash to create a new branch using this command 
 ```{r}
 ## git branch testbranch
@@ -70,7 +69,7 @@ This guide provides a clear and step by step explanation of how to effectively u
 ## git switch testbranch
 ```
 
-- Refresh your RStudio to see you are currently working in the **testbranch**
+Refresh your RStudio to see you are currently working in the **testbranch**
 
 - Modify example.qmd
 ```{r}
@@ -84,19 +83,56 @@ This guide provides a clear and step by step explanation of how to effectively u
 ## To push  >  git push origin testbranch
 ```
 
+When you visit the remote repository on GitHub, you’ll notice that the main branch remains unchanged. However, if you switch to the **testbranch**, you will see the newly added section in example.qmd.
+
+- Create a folder named data in the testbranch, add the data from your first assignment into this folder and then stage and commit but don't push
+
+```{r}
+## To stage  >  git add data/Global_Tech_Gadget_Consumption.csv
+## To commit  >  git commit -m "Add data folder with Assignment 1 data"
+```
+
+## 4. Amend the Previous Commit and Push
+
+- If you want to change the message of your most recent commit, use the following command
+
+```{r}
+## git commit --amend
+```
+
+Git opens your default text editor, where you can edit the commit message to something like:
+
+```{r}
+## Add data folder containing csv file from assignment 1.
+```
+
+- After amending the commit message, save and close the editor to apply the changes
+  - To save and exit the commit message in Vim: **Press Esc > write :wq > Press Enter**
+  
+- You’ll now see that the commit message has been updated. Since the commit history has changed, you’ll need to force-push the changes to GitHub using the following command:
+
+```{r}
+## git push --force
+```
 
 
+## 5. Create a merge conflict
 
-
-
-
-
+now to Create a merge conflict between main branch and the testbranch
  
+Now being on the same branch that you have created which is testbranch make some changes in the example.qmd which can be adding this new section 
+
+```{r}
+## This section was added on the testbranch. 
+```
+
+ Save the file, then stage and commit the change
  
- 
- 
- 
- 
+```{r}
+## To stage  >  git add example.qmd
+## To commit  >  git commit -m "Add new section on testbranch"
+```
+
  
  
  
